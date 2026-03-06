@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOLOGICALhome – Sustainable Luxury Living</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pastel-green': '#a8d5ba',
+                        'dark-green': '#1a4d2e',
+                        'earth': '#c4a77d',
+                        'beige': '#f5f1eb',
+                        'warm-brown': '#6b5a3c',
+                        'cream': '#faf8f5',
+                        'moss': '#4a6741',
+                        'sage': '#87a878',
+                        'deep-forest': '#0d2818',
+                        'gold': '#d4a853'
+                    },
+                    fontFamily: {
+                        'display': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo" id="preloaderLogo">
+            <span>ECOLOGICAL</span><span style="opacity:0.5; font-weight:300;">home</span>
+        </div>
+        <div class="preloader-bar">
+            <div class="preloader-fill" id="preloaderFill"></div>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link">Pocetna</a>
+        <a href="#about" class="mobile-nav-link">O nama</a>
+        <a href="#testimonials" class="mobile-nav-link">Iskustva</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="#contact" class="mobile-nav-link">Kontakt</a>
+    </div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center" style="text-decoration:none;">
+                <span class="logo-ecological">ECOLOGICAL</span>
+                <span class="logo-home-wrapper">
+                    <span class="logo-home">home</span>
+                </span>
+            </a>
+            
+            <nav class="nav-desktop flex items-center gap-8">
+                <a href="#home" class="nav-link">Pocetna</a>
+                <a href="#about" class="nav-link">O nama</a>
+                <a href="#testimonials" class="nav-link">Iskustva</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="header-cta nav-desktop">Zakazi konsultaciju</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-image-container" id="heroImageContainer">
+            <img src="images/hero-home.jpg" alt="Modern ecological home" class="hero-image" id="heroImage">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-gradient-line"></div>
+        
+        <div class="floating-shape" style="width:500px;height:500px;background:rgba(168,213,186,0.15);top:10%;right:-15%;"></div>
+        <div class="floating-shape" style="width:350px;height:350px;background:rgba(196,167,125,0.1);bottom:5%;left:-10%;"></div>
+        
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl pt-32 lg:pt-0">
+                <span class="section-label reveal-item" style="color:var(--gold);">Superiorni Ekološki Standard</span>
+                <h1 class="section-title reveal-item" style="color:var(--cream); font-size:clamp(2.2rem, 6vw, 4.5rem);">
+                    Eko dom<br>usklađen sa prirodom
+                </h1>
+                <p class="section-text reveal-item" style="color:var(--gold); text-shadow: 0px 2px 10px rgba(0,0,0,0.5); font-weight: 500;">
+    Implementirajte napredna ekološka rešenja u vaš enterijer. Solarni paneli, IoT automatizacija i biofilna arhitektura za savremeno stanovanje.
+</p>
+                
+                <div class="flex flex-wrap gap-4 reveal-item">
+                    <a href="#energetska-efikasnost" class="cta-btn-light cta-btn">
+                        Istrazi usluge
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#contact" class="cta-btn" style="background:transparent;border:2px solid rgba(255,255,255,0.3);box-shadow:none;">
+                        Kontaktirajte nas
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Floating Cards (desktop only) -->
+            <div class="hidden lg:block">
+                <a href="#energetska-efikasnost" class="floating-card" data-card="1" style="top:18%;right:8%; text-decoration:none;">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div class="card-title">Energetska Efikasnost</div>
+                    <div class="card-desc">Smanjite potrosnju za 60%</div>
+                </a>
+                
+                <a href="#solarni-sistemi" class="floating-card" data-card="2" style="top:42%;right:22%; text-decoration:none;">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    </div>
+                    <div class="card-title">Solarni Sistemi</div>
+                    <div class="card-desc">Cista energija iz prirode</div>
+                </a>
+                
+                <a href="#pametni-uredjaji" class="floating-card" data-card="3" style="top:32%;right:-3%; text-decoration:none;">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <div class="card-title">Pametni Uredjaji</div>
+                    <div class="card-desc">IoT automatizacija</div>
+                </a>
+                
+                <a href="#pametno-osvetljenje" class="floating-card" data-card="4" style="top:62%;right:12%; text-decoration:none;">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0018 8 6 6 0 006 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 018.91 14"/></svg>
+                    </div>
+                    <div class="card-title">Pametno Osvetljenje</div>
+                    <div class="card-desc">LED nova generacija</div>
+                </a>
+                
+                <a href="#filtracija-vode" class="floating-card" data-card="5" style="top:72%;right:32%; text-decoration:none;">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    </div>
+                    <div class="card-title">Filtracija Vode</div>
+                    <div class="card-desc">Cista voda za dom</div>
+                </a>
+            </div>
+            
+            <!-- Mobile cards -->
+            <div class="hero-cards-container lg:hidden">
+                <a href="#energetska-efikasnost" class="floating-card" style="text-decoration:none;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                    <div class="card-title">Energetska Efikasnost</div>
+                </a>
+                <a href="#solarni-sistemi" class="floating-card" style="text-decoration:none;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/></svg></div>
+                    <div class="card-title">Solarni Sistemi</div>
+                </a>
+                <a href="#pametni-uredjaji" class="floating-card" style="text-decoration:none;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/></svg></div>
+                    <div class="card-title">Pametni Uredjaji</div>
+                </a>
+                <a href="#pametno-osvetljenje" class="floating-card" style="text-decoration:none;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 22h4"/></svg></div>
+                    <div class="card-title">Pametno Osvetljenje</div>
+                </a>
+                <a href="#filtracija-vode" class="floating-card" style="text-decoration:none;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+                    <div class="card-title">Filtracija Vode</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">Energetska Efikasnost <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Solarni Paneli <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Pametni Dom <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Odrziva Arhitektura <span class="marquee-dot"></span></span>
+            <span class="marquee-item">LED Osvetljenje <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Filtracija Vode <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Luksuzni Dizajn <span class="marquee-dot"></span></span>
+            <span class="marquee-item">IoT Automatizacija <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Energetska Efikasnost <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Solarni Paneli <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Pametni Dom <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Odrziva Arhitektura <span class="marquee-dot"></span></span>
+            <span class="marquee-item">LED Osvetljenje <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Filtracija Vode <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Luksuzni Dizajn <span class="marquee-dot"></span></span>
+            <span class="marquee-item">IoT Automatizacija <span class="marquee-dot"></span></span>
+        </div>
+    </div>
+
+    <!-- ===== ENERGETSKA EFIKASNOST ===== -->
+    <section class="feature-section" id="energetska-efikasnost">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="feature-content reveal-left">
+                    <div class="feature-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <span class="section-label">Nase resenje</span>
+                    <h2 class="section-title">Energetska<br>efikasnost</h2>
+                    <p class="section-text">
+                        Transformišite objekat u energetski održiv prostor koji generiše uštede i štiti resurse. Naša rešenja 
+                        obuhvataju detaljan energetski audit,
+                        detekciju termičkih anomalija i implementaciju sofisticiranih tehnologija za maksimalnu efikasnost.
+                    </p>
+                    <p class="section-text" style="margin-top: 1rem;">
+                        Primenjujemo preciznu termovizijsku dijagnostiku i napredne simulacione modele za projektovanje optimalnih performansi
+                         vašeg doma.Inženjerski tim obezbeđuje punu podršku pri apliciranju za državne subvencije i ekološke fondove.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Termovizijska dijagnostika i detekcija toplotnih mostova</li>
+                        <li>Unapređenje termičkog omotača i fasadnih sistema</li>
+                        <li>Implementacija visokogrejanih toplotnih pumpi</li>
+                        <li>Inteligentni sistemi za monitoring potrošnje</li>
+                        <li>Sertifikacija energetskog pasoša objekta</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="60">0</div>
+                            <div class="feature-stat-label">% manja potrosnja</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="3">0</div>
+                            <div class="feature-stat-label">godine povracaj</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="200">0</div>
+                            <div class="feature-stat-label">realizovanih projekata</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-btn">
+                        Besplatna procena
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="feature-image reveal-right aspect-[4/3]">
+                    <div class="feature-badge">Preporučeno</div>
+                    <img src="images/energetska-efikasnost.jpg" alt="Energetska efikasnost">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLARNI SISTEMI ===== -->
+    <section class="feature-section" id="solarni-sistemi">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="feature-image reveal-left aspect-[4/3] lg:order-first order-last">
+                    <div class="feature-badge">Popularno</div>
+                    <img src="images/solarni-paneli.jpg" alt="Solarni paneli na krovu">
+                </div>
+                <div class="feature-content reveal-right lg:order-last">
+                    <div class="feature-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                    </div>
+                    <span class="section-label">Obnovljiva energija</span>
+                    <h2 class="section-title">Solarni<br>sistemi</h2>
+                    <p class="section-text">
+                        Maksimizujte energetsku nezavisnost implementacijom naprednih fotonaponskih rešenja. Pružamo integralnu uslugu koja
+                         obuhvata precizno projektovanje, proračun insolacije, profesionalnu instalaciju i dugoročno održavanje panela 
+                         superiornih performansi.
+                    </p>
+                    <p class="section-text" style="margin-top: 1rem;">
+                        Svaki sistem integriše inteligentni monitoring u realnom vremenu, omogućavajući vam potpunu kontrolu nad generisanjem
+                         i distribucijom energije putem napredne mobilne platforme.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Fotonaponski moduli premium klase uz 25-godišnju garanciju</li>
+                        <li>Hibridna rešenja sa naprednim baterijskim sistemima za skladištenje</li>
+                        <li>Inteligentni invertori za preciznu sinhronizaciju sa distributivnom mrežom</li>
+                        <li>Administrativna podrška za status kupca-proizvođača (prosumer)</li>
+                        <li>Kontinuirani monitoring i proaktivna tehnička podrška</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="25">0</div>
+                            <div class="feature-stat-label">godina garancije</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="100">0</div>
+                            <div class="feature-stat-label">% moguca nezavisnost</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="500">0</div>
+                            <div class="feature-stat-label">instaliranih sistema</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-btn">
+                        Izracunaj ustedu
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAMETNI UREDJAJI ===== -->
+    <section class="feature-section" id="pametni-uredjaji">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="feature-content reveal-left">
+                    <div class="feature-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <span class="section-label">IoT tehnologija</span>
+                    <h2 class="section-title">Pametni<br>uredjaji</h2>
+                    <p class="section-text">
+                        Transformišite rezidenciju u sofisticirani IoT ekosistem sa potpunom autonomijom rada.
+                         Naša rešenja za kućnu automatizaciju integrišu rasvetu, HVAC sisteme, sigurnosne protokole
+                         i multimediju u jedinstvenu mrežu kojom upravljate glasovnim komandama ili centralizovanom aplikacijom.
+                    </p>
+                    <p class="section-text" style="margin-top: 1rem;">
+                        Implementiramo vodeće industrijske standarde poput Zigbee, Z-Wave i Matter protokola, osiguravajući 
+                        besprekornu interoperabilnost sa širokim spektrom uređaja renomiranih svetskih proizvođača.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Centralni kontrolni hab sa naprednim vokalnim asistentom</li>
+                        <li>Inteligentni moduli i aktuatori za daljinsku kontrolu napajanja</li>
+                        <li>Zonska optimizacija mikroklime i termičkog komfora</li>
+                        <li>Integrisani sigurnosni sistem sa biometrijskom detekcijom i video nadzorom</li>
+                        <li>Native podrška za Amazon Alexa, Google Home i Apple HomeKit platforme</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="200">0</div>
+                            <div class="feature-stat-label">+ kompatibilnih uredjaja</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="30">0</div>
+                            <div class="feature-stat-label">% ustede energije</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="24">0</div>
+                            <div class="feature-stat-label">/7 podrška</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-btn">
+                        Pogledaj demo
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="feature-image reveal-right aspect-[4/3]">
+                    <div class="feature-badge">Smart Home</div>
+                    <img src="images/pametni-dom.jpg" alt="Pametni dom kontrolna tabla">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAMETNO OSVETLJENJE ===== -->
+    <section class="feature-section" id="pametno-osvetljenje">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="feature-image reveal-left aspect-[4/3] lg:order-first order-last">
+                    <div class="feature-badge">LED tehnologija</div>
+                    <img src="images/pametno-osvetljenje.jpg" alt="Pametno LED osvetljenje u enterijeru">
+                </div>
+                <div class="feature-content reveal-right lg:order-last">
+                    <div class="feature-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M9 18h6M10 22h4"/>
+                            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0018 8 6 6 0 006 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 018.91 14"/>
+                        </svg>
+                    </div>
+                    <span class="section-label">Ambijentalni dizajn</span>
+                    <h2 class="section-title">Pametno<br>osvetljenje</h2>
+                    <p class="section-text">
+                        Sistemi osvetljenja predstavljaju vitalnu komponentu enterijera – oni definišu ambijent,
+                        koriguju cirkadijalni ritam i optimizuju potrošnju energije. Naša LED rešenja nove generacije
+                        omogućavaju preciznu modulaciju intenziteta i hromatskog spektra u milionima nijansi.
+                    </p>
+                    <p class="section-text" style="margin-top: 1rem;">
+                        Projektujte svetlosne scenarije prilagođene svakom kontekstu – od intimne atmosfere i bioskopskog 
+                        režima, do stimulativnog radnog okruženja. Jednostavnom vokalnom komandom ili dodirom inicirajte
+                        potpunu transformaciju prostora.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Napredna LED rešenja sa RGBW modulacijom i preciznim dimovanjem</li>
+                        <li>Inteligentni izvori svetlosti kompatibilni sa vodećim IoT protokolima</li>
+                        <li>Senzorska detekcija prisustva za automatizovanu uštedu energije</li>
+                        <li>Programiranje dinamičkih scena i vremenskih sekvenci osvetljenja</li>
+                        <li>Simultana integracija sa sistemima za kontrolu prirodne svetlosti</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="85">0</div>
+                            <div class="feature-stat-label">% manja potrosnja</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="16">0</div>
+                            <div class="feature-stat-label">M+ boja</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="50">0</div>
+                            <div class="feature-stat-label">000 sati trajanja</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-btn">
+                        Dizajniraj osvetljenje
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FILTRACIJA VODE ===== -->
+    <section class="feature-section" id="filtracija-vode">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="feature-content reveal-left">
+                    <div class="feature-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+                        </svg>
+                    </div>
+                    <span class="section-label">Zdrav zivot</span>
+                    <h2 class="section-title">Filtracija<br>vode</h2>
+                    <p class="section-text">
+                        Visokokvalitetna voda predstavlja fundament zdravog stanovanja. Naši integrisani sistemi
+                        purifikacije obezbeđuju vašoj rezidenciji resurse najvišeg stepena čistoće na svakom izvorištu
+                        u objektu. Primenjujemo sofisticirane višestepene procese obrade koji eliminišu sve kontaminante.
+                    </p>
+                    <p class="section-text" style="margin-top: 1rem;">
+                        Projektujemo rešenja specifična za vaše potrebe – od kompaktnih kuhinjskih modula do centralnih sistema
+                         za tretman vode u celom objektu. Naša tehnologija reverzne osmoze isporučuje vodu mineralnog sastava 
+                         ekvivalentnog prirodnim izvorima.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Višestepeni tretman sa aktivnim ugljem i membranskom filtracijom</li>
+                        <li>Reverzna osmoza za molekularnu purifikaciju vode</li>
+                        <li>UV sterilizacija za potpunu mikrobiološku dekontaminaciju</li>
+                        <li>Sistemi za demineralizaciju i zaštitu hidrotehničkih instalacija</li>
+                        <li>Inteligentni monitoring hemijskog sastava vode u realnom vremenu</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="99">0</div>
+                            <div class="feature-stat-label">% cistoce vode</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="5">0</div>
+                            <div class="feature-stat-label">stepeni filtracije</div>
+                        </div>
+                        <div class="feature-stat">
+                            <div class="feature-stat-value" data-count="300">0</div>
+                            <div class="feature-stat-label">+ instaliranih sistema</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-btn">
+                        Analiza vode
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="feature-image reveal-right aspect-[4/3]">
+                    <div class="feature-badge">Zdravlje</div>
+                    <img src="images/filtracija-vode.jpg" alt="Sistem za filtraciju vode">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS BANNER ===== -->
+    <div class="stats-banner">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-0 lg:justify-between">
+                <div class="text-center stat-item">
+                    <div class="stat-value" data-count="500">0</div>
+                    <div class="stat-label">Realizovanih projekata</div>
+                </div>
+                <div class="stat-divider hidden lg:block"></div>
+                <div class="text-center stat-item">
+                    <div class="stat-value" data-count="60">0</div>
+                    <div class="stat-label">% ustede energije</div>
+                </div>
+                <div class="stat-divider hidden lg:block"></div>
+                <div class="text-center stat-item">
+                    <div class="stat-value" data-count="98">0</div>
+                    <div class="stat-label">% zadovoljnih klijenata</div>
+                </div>
+                <div class="stat-divider hidden lg:block"></div>
+                <div class="text-center stat-item">
+                    <div class="stat-value" data-count="15">0</div>
+                    <div class="stat-label">Nagrada za dizajn</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== O NAMA ===== -->
+    <section class="content-block" id="about" style="background:var(--cream);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-20 items-center">
+                <div class="lg:col-span-5 reveal-left">
+                    <span class="section-label">O nama</span>
+                    <h2 class="section-title">Gradimo buducnost<br>zajedno</h2>
+                    <p class="section-text">
+                       Preko deset godina posvećeni smo projektovanju rezidencija koje integrišu beskompromisni luksuz sa održivim inženjeringom. Naš ekspertski
+                       tim implementira napredne tehnologije kako bi vaš objekat transformisao u energetski autonoman ekološki ekosistem.
+                    </p>
+                    <p class="section-text" style="margin-top:1rem;">
+                        Naša filozofija počiva na premisi da su održivost i ekskluzivitet komplementarni standardi. Svaki realizovani projekat predstavlja 
+                        validaciju koncepta besprekornog komfora ostvarenog uz apsolutno poštovanje prirodnog okruženja.
+                    </p>
+                    <a href="#contact" class="cta-btn">
+                        Kontaktirajte nas
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="lg:col-span-6 lg:col-start-7 reveal-right">
+                    <div class="relative">
+                        <div class="block-image aspect-[4/3]">
+                            <img src="images/o-nama.jpg" alt="Modern sustainable architecture">
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 bg-dark-green text-cream p-6 rounded-2xl shadow-2xl z-10 hidden lg:block" style="max-width:220px;">
+                            <div class="font-display font-bold text-3xl" style="color:var(--pastel-green);">12+</div>
+                            <div class="text-sm mt-1" style="color:rgba(255,255,255,0.7);">Godina iskustva u odrzivom dizajnu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HORIZONTAL STORYTELLING ===== -->
+    <section class="horizontal-section" id="story">
+        <div class="horizontal-wrapper" id="horizontalWrapper">
+            <div class="story-panel">
+                <div class="story-content story-item">
+                    <div class="story-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="story-number">01</div>
+                    <h3 class="story-title">Biofilno projektovanje</h3>
+                    <p class="story-text">
+                        Projektujemo rezidencijalne objekte u potpunom sinergizmu sa prirodnim okruženjem. 
+                        Primenjujemo autohtone materijale i principe pasivne solarne arhitekture radi postizanja
+                        maksimalne energetske efikasnosti i superiorne estetike.
+                    </p>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-content story-item">
+                    <div class="story-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <div class="story-number">02</div>
+                    <h3 class="story-title">Tehnološka integracija</h3>
+                    <p class="story-text">
+                        Implementacija najsavremenijih Smart Home ekosistema. Centralizovano upravljanje mikroklimom,
+                        inteligentnom rasvetom i energetskim resursima putem unificiranog interfejsa dostupnog sa bilo kog uređaja.
+                    </p>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-content story-item">
+                    <div class="story-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    </div>
+                    <div class="story-number">03</div>
+                    <h3 class="story-title">Ekološka regeneracija</h3>
+                    <p class="story-text">
+                        Fotonaponski moduli, sistemi za eksploataciju atmosferskih voda i geotermalna energija — svaka komponenta doprinosi dekarbonizaciji
+                        i očuvanju ekosistema za buduće generacije.
+                    </p>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-content story-item">
+                    <div class="story-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+                    </div>
+                    <div class="story-number">04</div>
+                    <h3 class="story-title">Beskompromisni ekskluzivitet</h3>
+                    <p class="story-text">
+                        Održivost ne podrazumeva estetski ili funkcionalni kompromis. Naše rezidencije pružaju vrhunski komfor, selekciju premium materijala i bezbednosne protokole nove 
+                        generacije integrisane u svaki detalj.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="content-block" id="testimonials" style="background:var(--beige);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="section-label" style="padding-left:0;">Iskustva klijenata</span>
+                <h2 class="section-title">Sta kazu nasi klijenti</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card testimonial-item">
+                    <div class="testimonial-stars">
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Objekat je u potpunosti transformisan u inteligentni ekosistem sa visokim stepenom autonomije.
+                         Energetska optimizacija je generisala izvanredne rezultate — redukcija operativnih troškova
+                         električne energije iznosi 65% u odnosu na prethodni period. Investicija koja je redefinisala 
+                         ekonomičnost našeg stanovanja."
+                    </p>
+                    <div class="testimonial-author-row">
+                        <div class="testimonial-avatar">MP</div>
+                        <div>
+                            <div class="testimonial-author">Milan P.</div>
+                            <div class="testimonial-role">Vlasnik vile, Beograd</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card testimonial-item">
+                    <div class="testimonial-stars">
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                       "Ekspertski pristup bio je prisutan od inicijalne faze projekta. Inženjerski tim je sproveo
+                        detaljnu analizu svih dostupnih modaliteta i pružio nam strateško savetovanje u cilju odabira
+                         optimalnih tehnoloških rešenja. Transparentna komunikacija i visok nivo profesionalizma odlikuju 
+                         svaki segment saradnje."
+                    </p>
+                    <div class="testimonial-author-row">
+                        <div class="testimonial-avatar">JN</div>
+                        <div>
+                            <div class="testimonial-author">Ivana K.</div>
+                            <div class="testimonial-role">Arhitekta, Novi Sad</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card testimonial-item">
+                    <div class="testimonial-stars">
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                        <svg class="testimonial-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Implementirani fotonaponski sistem generiše performanse koje su prevazišle inicijalne projekcije. Trenutni energetski bilans je pozitivan,
+                         pri čemu sistem produkuje suficit energije u odnosu na ukupnu potrošnju objekta.
+                    </p>
+                    <div class="testimonial-author-row">
+                        <div class="testimonial-avatar">DI</div>
+                        <div>
+                            <div class="testimonial-author">Marko J.</div>
+                            <div class="testimonial-role">Preduzetnik, Nis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="content-block" id="faq" style="background:var(--beige);">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="section-label" style="padding-left:0;">Cesta pitanja</span>
+                <h2 class="section-title">Imate pitanja?</h2>
+            </div>
+            
+            <div class="space-y-0">
+                <div class="faq-item" data-faq>
+                    <button class="faq-question">
+                        Koliko kosta instalacija solarnih panela?
+                        <span class="faq-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vrednost investicije determinisana je instalisanom snagom sistema (kWp) i specifičnim tehničkim zahtevima
+                             objekta. Za rezidencijalni objekat prosečne kvadrature, investicija se kreće u rasponu od 5.000 do 12.000 EUR.
+                              Prosečan period povraćaja investicije (ROI) kroz generisane uštede iznosi između 6 i 9 godina, u zavisnosti 
+                              od dinamike rasta cena električne energije i dostupnih subvencija.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-faq>
+                    <button class="faq-question">
+                        Koji je predviđeni vremenski okvir za implementaciju sistema?
+                        <span class="faq-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dinamika realizacije zavisi od kompleksnosti projekta i nivoa integracije različitih tehnologija. 
+                            Instalacija fotonaponskog sistema prosečno traje 2 do 3 radna dana. S druge strane, sveobuhvatna Smart Home
+                             integracija i kalibracija automatizovanih sistema zahteva period od 10 do 15 radnih dana, kako bi se osigurala
+                              stabilnost mreže i besprekorna interoperabilnost svih komponenti.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-faq>
+                    <button class="faq-question">
+                       Koji garantni protokoli obuhvataju vašu opremu i radove?
+                        <span class="faq-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Apsolutno. Svaka implementacija podržana je rigoroznim garantnim rokovima: na fotonaponske panele pružamo
+                             25-godišnju garanciju na performanse, dok je na ostalu tehnološku opremu obezbeđen period od 5 do 10 godina.
+                             Izvedeni radovi i sistemska instalacija osigurani su 3-godišnjom garancijom na kvalitet izvođenja. Takođe, 
+                             nudimo opcione ugovore o preventivnom održavanju koji dodatno produžavaju životni vek i operativnu stabilnost sistema.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-faq>
+                    <button class="faq-question">
+                       Da li je moguće ostvariti pravo na državne subvencije za ekološku modernizaciju?
+                        <span class="faq-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da. Naš ekspertski tim pruža integralnu podršku u procesu apliciranja za sve aktuelne subvencije na nacionalnom i lokalnom nivou.
+                             Pružamo kompletan konsalting, pripremamo neophodnu tehničku dokumentaciju i vodimo vas kroz administrativni proces kako biste maksimizovali povraćaj investicije putem dostupnih ekoloških fondova i programa energetske sanacije.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-faq>
+                    <button class="faq-question">
+                        Da li su vaše usluge dostupne na celokupnoj teritoriji Republike Srbije?
+                        <span class="faq-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a4d2e" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Apsolutno. Naša operativna mreža omogućava realizaciju projekata na celokupnoj teritoriji Srbije. Iako su naši primarni logistički centri locirani u Beogradu i Novom Sadu, posedujemo kapacitete za izvođenje kompleksnih 
+                            inženjerskih radova i implementaciju sistema bez obzira na geografsku lokaciju vašeg objekta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-display font-800 text-cream mb-4" style="font-size:clamp(1.8rem,4vw,3rem); font-weight:800; color:var(--cream); line-height:1.15;">
+                Spremni za transformaciju<br>vaseg doma?
+            </h2>
+            <p style="color:rgba(168,213,186,0.7); font-size:1.1rem; max-width:500px; margin:0 auto 2rem; line-height:1.8;">
+               Zakažite termin za inicijalnu ekspertsku konsultaciju i saznajte na koji način možemo optimizovati vaš životni 
+               prostor primenom naprednih tehnoloških rešenja i održivih inženjerskih standarda.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="cta-btn-light cta-btn">
+                    Zakazi konsultaciju
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+381113456789" class="cta-btn" style="background:transparent; border:2px solid rgba(255,255,255,0.3); box-shadow:none;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    Pozovite nas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KONTAKT ===== -->
+    <section class="content-block contact-section" id="contact" style="padding-top:6rem; padding-bottom:6rem;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="section-label" style="padding-left:0;">Kontaktirajte nas</span>
+                <h2 class="section-title">Javite nam se</h2>
+                <p class="section-text mx-auto text-center" style="max-width:550px;">
+                    Imate pitanje ili zelite da zakazete konsultaciju?
+                   Ukoliko imate dodatna pitanja ili želite da zakažete termin za stratešku konsultaciju, naš tim vam stoji na raspolaganju. Možete nas kontaktirati putem telefona,
+                    elektronske pošte ili nas posetiti u našim poslovnim prostorijama radi detaljnije prezentacije rešenja.
+                </p>
+            </div>
+            
+            <!-- Contact Info Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+                <div class="contact-info-card reveal-up">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Telefon</div>
+                        <div class="contact-value">
+                            <a href="tel:+381113456789">+381 11 123 45 67</a><br>
+                            <a href="tel:+381601234567">+381 60 123 45 67</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card reveal-up">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:info@ecologicalhome.rs">info@ecologicalhome.rs</a><br>
+                            <a href="mailto:prodaja@ecologicalhome.rs">prodaja@ecologicalhome.rs</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card reveal-up">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Lokacija</div>
+                        <div class="contact-value">
+                            Bulevar Aleksandra <br>
+                            11000 Beograd, Srbija
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card reveal-up">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Radno vreme</div>
+                        <div class="contact-value">
+                            Pon – Pet: 08:00 – 18:00<br>
+                            Sub: 09:00 – 14:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form + Map -->
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Form -->
+                <div class="contact-form reveal-left">
+                    <h3 class="font-display font-bold text-xl text-dark-green mb-2">Posaljite upit</h3>
+                    <p class="text-warm-brown text-sm mb-8">Popunite formu i javicemo vam se u roku od 24 sata.</p>
+                    
+                    <form>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label class="form-label">Ime *</label>
+                                <input type="text" class="form-input" placeholder="Vase ime" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Prezime *</label>
+                                <input type="text" class="form-input" placeholder="Vase prezime" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-input" placeholder="email@primer.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Telefon</label>
+                                <input type="tel" class="form-input" placeholder="+381 60 ...">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Usluga</label>
+                            <select class="form-select">
+                                <option value="">Izaberite uslugu</option>
+                                <option value="energetska">Energetska efikasnost</option>
+                                <option value="solar">Solarni sistemi</option>
+                                <option value="smart">Pametni uredjaji</option>
+                                <option value="led">Pametno osvetljenje</option>
+                                <option value="water">Filtracija vode</option>
+                                <option value="other">Ostalo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Poruka *</label>
+                            <textarea class="form-textarea" placeholder="Opisite vas projekat ili pitanje..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">
+                            Posaljite upit
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Map + Extra Info -->
+                <div class="reveal-right">
+                    <div class="map-container mb-6" style="height:350px;">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181139.5409946163!2d20.422468199999997!3d44.81534404999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2z0JHQtdC-0LPRgNCw0LQ!5e0!3m2!1ssr!2srs!4v1772750219450!5m2!1ssr!2srs" 
+                      width="600"
+                       height="450" 
+                       style="border:0;
+                       "allowfullscreen="
+                       " loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    </div>
+                    
+                    <!-- Quick contact buttons -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://wa.me/381601234567" target="_blank" class="bg-white rounded-2xl p-4 flex items-center gap-3 shadow-sm border border-pastel-green/10 hover:shadow-lg hover:-translate-y-1 transition-all" style="text-decoration:none;">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#25D366;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div>
+                                <div class="font-display font-semibold text-dark-green text-xs">WhatsApp</div>
+                                <div class="text-warm-brown text-xs">Pisete nam</div>
+                            </div>
+                        </a>
+                        <a href="viber://chat?number=381601234567" class="bg-white rounded-2xl p-4 flex items-center gap-3 shadow-sm border border-pastel-green/10 hover:shadow-lg hover:-translate-y-1 transition-all" style="text-decoration:none;">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#7360f2;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M11.4 0C5.6 0 .9 4.5.6 10.2c-.1 2.3.5 4.6 1.8 6.5l-2 5.8c-.1.4.3.7.6.6l5.8-2c1.9 1.2 4.1 1.8 6.4 1.8h.1c5.7 0 10.3-4.5 10.6-10.2C24.3 5.6 18.5 0 11.4 0zm5.8 16.3c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.1.3-3.7-.8-3.1-1.3-5.1-4.5-5.3-4.7-.2-.2-1.3-1.7-1.3-3.3s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.4 1.1 2.6.1.2.1.4 0 .6s-.2.3-.3.5c-.2.2-.3.3-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.3.2.5.1.7-.1.2-.2.8-1 1.1-1.3.2-.3.5-.3.8-.2.3.1 1.8.8 2.1 1 .3.2.5.3.6.4.1.2.1.9-.2 1.7z"/></svg>
+                            </div>
+                            <div>
+                                <div class="font-display font-semibold text-dark-green text-xs">Viber</div>
+                                <div class="text-warm-brown text-xs">Pisete nam</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="footer-top">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Column 1 - Brand -->
+                    <div class="lg:col-span-1">
+                        <div class="mb-4">
+                            <span class="logo-ecological" style="color:var(--pastel-green); font-size:1.2rem;">ECOLOGICAL</span>
+                            <span class="logo-home-wrapper" style="background:rgba(255,255,255,0.08);">
+                                <span class="logo-home" style="font-size:1.2rem;">home</span>
+                            </span>
+                        </div>
+                        <p style="color:rgba(255,255,255,0.4); font-size:0.85rem; line-height:1.7; max-width:280px;">
+                            Lider u oblasti odrzivog luksuza i pametnih ekoloskih domova.
+                        </p>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div>
+                        <h4 class="footer-title">Usluge</h4>
+                        <a href="#energetska-efikasnost" class="footer-link">Energetska efikasnost</a>
+                        <a href="#solarni-sistemi" class="footer-link">Solarni sistemi</a>
+                        <a href="#pametni-uredjaji" class="footer-link">Pametni uredjaji</a>
+                        <a href="#pametno-osvetljenje" class="footer-link">Pametno osvetljenje</a>
+                        <a href="#filtracija-vode" class="footer-link">Filtracija vode</a>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div>
+                        <h4 class="footer-title">Kompanija</h4>
+                        <a href="#about" class="footer-link">O nama</a>
+                        <a href="#testimonials" class="footer-link">Iskustva</a>
+                        <a href="#faq" class="footer-link">FAQ</a>
+                        <a href="#contact" class="footer-link">Kontakt</a>
+                    </div>
+                    
+                    <!-- Column 4 -->
+                    <div>
+                        <h4 class="footer-title">Kontakt</h4>
+                        <a href="tel:+381113456789" class="footer-link">+381 11 345 67 89</a>
+                        <a href="tel:+381601234567" class="footer-link">+381 60 123 45 67</a>
+                        <a href="mailto:info@ecologicalhome.rs" class="footer-link">info@ecologicalhome.rs</a>
+                        <p style="color:rgba(255,255,255,0.4); font-size:0.85rem; margin-top:0.75rem; line-height:1.6;">
+                            Bul. Kralja Aleksandra 73<br>11000 Beograd
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                    &copy; 2025 ECOLOGICALhome. Sva prava zadrzana. Designed and developed by Aleksandar Anicic - Web UI/UX designer.
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
